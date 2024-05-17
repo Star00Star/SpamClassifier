@@ -53,9 +53,9 @@ def get_label_in_a_file(original_path, save_path='label.txt'):
 
 def dataProcess():
     print('Storing emails in a file ...')
-    get_data_in_a_file('trec06c/data', save_path='text.txt')
+    get_data_in_a_file('/content/drive/MyDrive/SpamClassifier/trec06c/data', save_path='/content/drive/MyDrive/SpamClassifier/trec06c/text.txt')
     print('Store emails finished !')
 
     print('Storing labels in a file ...')
-    get_label_in_a_file('trec06c/full/index', save_path='label.txt')
+    get_label_in_a_file('/content/drive/MyDrive/SpamClassifier/trec06c/full/index', save_path='/content/drive/MyDrive/SpamClassifier/trec06c/label.txt')
     print('Store labels finished !')
