@@ -6,6 +6,7 @@ import codecs
 from sklearn.model_selection import train_test_split
 from model import Config, MyModel
 from utils import train, test
+from data_process import dataProcess
 
 
 # 构造数据集类，转换为Dataloader可以读取的形式
@@ -26,7 +27,7 @@ class NewDataset(Dataset):
 
 if __name__ == '__main__':
     config = Config()
-    data_process.dataProcess()    # 处理原始数据集trec06c.tgz，得到文件text.txt和labels.txt
+    dataProcess()    # 处理原始数据集trec06c.tgz，得到文件text.txt和labels.txt
     print(f"{config.device}\n")
     # 文本
     # new_texts = [x[-300:].strip() for x in codecs.open('text.txt',encoding='utf8')]
