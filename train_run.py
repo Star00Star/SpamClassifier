@@ -26,7 +26,7 @@ class NewDataset(Dataset):
 
 if __name__ == '__main__':
     config = Config()
-    # dataProcess()    # 处理原始数据集trec06c.tgz，得到文件text.txt和labels.txt
+    dataProcess()    # 处理原始数据集trec06c.tgz，得到文件text.txt和labels.txt
     print(f"{config.device}\n")
     # 文本
     # new_texts = [x[-300:].strip() for x in codecs.open('text.txt',encoding='utf8')]
