@@ -31,9 +31,9 @@ if __name__ == '__main__':
     print(f"{config.device}\n")
     # 文本
     # new_texts = [x[-300:].strip() for x in codecs.open('text.txt',encoding='utf8')]
-    new_texts = [x.strip() for x in codecs.open('text.txt', encoding='utf8')]
+    new_texts = [x.strip() for x in codecs.open('/content/drive/MyDrive/SpamClassifier/trec06c/text.txt', encoding='utf8')]
     # 标签
-    new_labels = [x.strip() for x in codecs.open('label.txt')]
+    new_labels = [x.strip() for x in codecs.open('/content/drive/MyDrive/SpamClassifier/trec06c/label.txt')]
 
     # 划分训练集、测试集、验证集
     X_train, X_temp, y_train, y_temp = train_test_split(new_texts[:], new_labels[:], test_size=0.2)
