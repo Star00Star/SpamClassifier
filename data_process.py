@@ -13,7 +13,7 @@ def clean_str(string):
 
 
 # 提取邮件内容
-def get_data_in_a_file(original_path, save_path='text.txt'):
+def get_data_in_a_file(original_path, save_path='/content/drive/MyDrive/SpamClassifier/trec06c/text.txt'):
     files = os.listdir(original_path)
     for file in files:
         if os.path.isdir(original_path + '/' + file):
@@ -34,7 +34,7 @@ def get_data_in_a_file(original_path, save_path='text.txt'):
 
 
 # 提取邮件标签
-def get_label_in_a_file(original_path, save_path='label.txt'):
+def get_label_in_a_file(original_path, save_path='/content/drive/MyDrive/SpamClassifier/trec06c/label.txt'):
     f = open(original_path, 'r')
     label_list = []
     for line in f:
