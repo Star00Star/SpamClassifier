@@ -8,7 +8,7 @@ class Config(object):
     """配置参数"""
     def __init__(self):
         self.model_name = 'bert'
-        self.save_path = 'checkpoint/' + self.model_name + '.ckpt'        # 模型训练结果
+        self.save_path = '/content/drive/MyDrive/SpamClassifier/checkpoint/' + self.model_name + '.ckpt'        # 模型训练结果
         self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')   # 设备
         self.require_improvement = 1000                                 # 若超过1000batch效果还没提升，则提前结束训练
         self.num_classes = 2                                            # 标签类别数
@@ -16,7 +16,7 @@ class Config(object):
         self.batch_size = 16
         self.num_epochs = 3                                            # epoch数
         self.learning_rate = 5e-5                                       # 学习率
-        self.bert_path = './pretrain_model/bert-base-chinese'
+        self.bert_path = '/content/drive/MyDrive/SpamClassifier/pretrain_model/bert-base-chinese'
         self.hidden_size = 768
 
 
