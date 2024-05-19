@@ -22,12 +22,12 @@ class Config(object):
 
 class MyModel(nn.Module):
 
-    def __init__(self, Config):
+    def __init__(self, config):
         super(MyModel, self).__init__()
-        self.bert = BertModel.from_pretrained(Config.bert_path)
+        self.bert = BertModel.from_pretrained(config.bert_path)
         for param in self.bert.parameters():
             param.requires_grad = True
-        self.fc = nn.Linear(Config.hidden_size, Config.num_classes)
+        self.fc = nn.Linear(config.hidden_size, config.num_classes)
 
     def forward(self, x):
         input_ids = x['input_ids']  # 输入的句子每个词对应的id
